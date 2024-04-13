@@ -7,7 +7,7 @@ import pandas as pd
 import os
 
 # Load data
-image_dir = Path('/kaggle/input/flowers-recognition/flowers')
+image_dir = Path('/content/flowers-recognition/flowers')
 file_paths = list(image_dir.glob(r'**/*.jpg'))
 labels = list(map(lambda x: os.path.split(os.path.split(x)[0])[1], file_paths))
 file_paths = pd.Series(file_paths, name="FilePath").astype(str)
